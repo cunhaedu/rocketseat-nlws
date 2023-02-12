@@ -1,0 +1,154 @@
+.sendMessageFormWrapper {
+  background: #1b1b1f;
+  padding: 24px;
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  @media (max-width: 500px) {
+    background: none;
+  }
+}
+
+.signOutButton {
+  background: transparent;
+  border: 0;
+  color: var(--gray-600);
+
+  position: absolute;
+  left: 24px;
+  top: 24px;
+
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  @media (max-width: 500px) {
+    left: 73vw;
+    top: -69vh;
+  }
+}
+
+.userInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .userImage {
+    padding: 3px;
+    background: var(--gradient);
+    border-radius: 50%;
+    line-height: 0;
+
+    img {
+      width: 94px;
+      height: 94px;
+      border-radius: 50%;
+      border: 6px solid var(--black-800);
+    }
+  }
+
+  .userName {
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 16px;
+  }
+
+  .userGithub {
+    display: flex;
+    align-items: center;
+
+    margin-top: 8px;
+    color: var(--gray-600);
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    display: none;
+  }
+}
+
+.sendMessageForm {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  margin-top: 48px;
+  background: var(--black-700);
+
+  label {
+    padding: 18px 24px;
+    font-size: 20px;
+    background: var(--black-600);
+    font-weight: bold;
+    text-align: left;
+  }
+
+  textarea {
+    background: transparent;
+    border: 0;
+    padding: 24px;
+    resize: none;
+    height: 160px;
+    color: var(--gray-700);
+    font-size: 16px;
+    line-height: 24px;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &::placeholder {
+      color: var(--gray-700);
+    }
+  }
+
+  button {
+    align-self: flex-end;
+    background: var(--pink);
+    margin: 24px;
+    border: none;
+    padding: 0 32px;
+    height: 40px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      margin-right: 16px;
+    }
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+
+  @media (max-width: 500px) {
+    min-width: 85vw;
+    align-self: auto;
+
+    label, textarea {
+      text-align: center;
+    }
+
+    button {
+      margin: 036px;
+    }
+  }
+}
